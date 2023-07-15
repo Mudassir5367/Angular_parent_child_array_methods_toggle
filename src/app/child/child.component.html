@@ -1,0 +1,12 @@
+<p>child works!</p>
+<h3>{{data}}</h3>
+
+<div *ngFor="let item of items">
+    <input type="tel" [(ngModel)]="item.firstNumber">
+    <input type="tel" [(ngModel)]="item.secondNumber">
+    <button type="button" (click)="submit(item)">Save</button>
+</div>
+
+{{getDatafromParent}}
+
+<button (click)="clickEvent()">Click</button>

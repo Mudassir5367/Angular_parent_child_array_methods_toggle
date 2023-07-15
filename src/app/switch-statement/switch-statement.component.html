@@ -1,0 +1,18 @@
+<h1>switch-statement works!</h1>
+<div [ngSwitch] ="color">
+<h3 *ngSwitchCase= "'yellow'" style="color: yellow;">Red Color</h3> 
+<h3 *ngSwitchCase= "'red'" style="color:red;">Red Color</h3>
+<h3 *ngSwitchCase= "'green'" style="color: green;">Green color</h3>
+<h3 *ngSwitchCase= "'orange'" style="color: orange;">Orange color</h3>
+<h3 *ngSwitchDefault>Default Color</h3>
+
+</div>
+
+
+<ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }})</li>
+</ul>
+<h3>self practice</h3>
+<ul *ngFor="let i of arr">
+    <li [ngStyle]="{'color':getColor1(i.country)}"> {{i.name}} {{i.country}}</li>
+</ul>

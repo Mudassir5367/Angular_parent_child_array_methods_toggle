@@ -1,0 +1,21 @@
+<p>child1 works!</p>
+{{DataFromParent}}
+{{dataIsFromParent}}
+<h3 *ngFor="let i of ArrayFromparent">
+{{i.Name}}
+</h3>
+
+<h4 *ngFor="let k of Array2">
+    {{k.fName}}
+</h4> 
+
+<button (click)="transferData()">From Child</button>
+<button (click)="change()">Child to Parent</button>
+<button (click)="submit()">ChildToParent</button>
+<!-- // practice Again parent child relation -->
+<div *ngFor="let j of Arr2DataFromParent">
+{{j.Name}}
+</div>
+<br><br>
+
+{{dataFromParentToChild}}

@@ -1,0 +1,161 @@
+Hello World 
+<router-outlet></router-outlet>
+<form [formGroup]= "loginForm" (ngSubmit)="form()">
+  <input type="text" placeholder="Enter Name" formControlName= "user">
+  <br><br>
+  <input type="password" placeholder="Enter Password" formControlName= "password">
+  <br><br>
+  <button>Login</button>
+</form>
+
+<!-- <form [formGroup]= "detailForm" (ngSubmit)="form()">
+<input type="text" placeholder="Enter Name" formControlName="user1"> <br><br>
+<input type="email" placeholder="Enter email" formControlName="email"> <br><br>
+<input type="password" placeholder="Enter Password" formControlName="password"> <br><br>
+
+<button>Submitt</button>
+
+</form> -->
+
+
+
+<br><br><br><br>
+<app-array></app-array>
+<br><br>
+
+
+
+
+<!-- ng-class  -->
+<h1 [ngClass]="'first:true'">Class Binding</h1>
+<!-- ng-style -->
+<h1>style Bindig</h1>
+<h3 [style.color]="'green'">Style binding</h3>
+<h3 [style.color]="'blue'">Style binding1</h3>
+<h3 [style.color]= "color1">Style binding2</h3>
+<h3 [style.color]= "err? 'orange':'black'">condition</h3>
+<button (click)= "updateColor()">updateColor</button>
+
+
+
+<!-- toggle method -->
+<app-toggle></app-toggle>
+<br><br>
+
+
+<!-- Switch-Statement -->
+<app-switch-statement></app-switch-statement>
+<br><br>
+
+
+<app-child [getDatafromParent]="passDataToChild" (passDataToParent)="receivedData($event)"></app-child>
+
+<!-- child to parent -->
+{{getData}}
+
+<app-child [getNumberfromParent]="getNumber"></app-child>
+
+{{getNumber}}
+
+<!-- Child-1 to parent -->
+<app-child1 [DataFromParent]="passDataToChild1" (passDataToParent1)="fromChild1($event)"></app-child1>
+{{getData1}}
+
+
+
+<app-child1 [dataIsFromParent]="dataToChld1" (dataToParent)="gettingData($event)"></app-child1>
+{{fetchData}}
+
+<app-child1 [ArrayFromparent]="arr" (childToParent)="gainData($event)"></app-child1>
+{{getData2}}
+<app-child1 [Array2]="arr1"></app-child1>
+
+<!-- From child to Parent -->
+
+<!-- Practice Again Parent Child relation -->
+<br><br>
+<app-child1 [Arr2DataFromParent]="arr2"></app-child1>
+
+<app-child1 [dataFromParentToChild]="dataFromParentToChild"></app-child1>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h3>Day-3</h3> -->
+<!-- onChange -->
+<!-- <button (click)="updateData()">Change</button>
+
+<h3 *ngIf="show=='no'; then ifBlock else elseBlock"></h3>
+
+<ng-template #ifBlock>
+  <h3>If Condition</h3>
+</ng-template>  
+<ng-template #elseBlock>
+  <h3>Else Condition</h3>
+</ng-template>  
+
+< // For loop -->
+<!-- <div *ngFor = "let i of employ">{{i}}</div>
+
+
+<button (click)="statements()">Addition</button> -->
+
+<!-- // -->
+
+
+<!-- //. -->
+
+<!-- <h3>Day-1&2 </h3>> -->
+<!-- <div *ngIf="showTitle">
+  {{title}}
+</div>
+<button (click)="clickEvent(val)">click</button>
+
+<div>
+  <strong>{{firstName}}</strong>
+  <strong>{{lastName}}</strong>
+</div>
+
+   <div>
+   <span [innerHTML]='firstName'></span>                
+   </div>
+
+   <button (click)="ShowClick()">oneWayBinding</button>
+   <br><br>
+   <input  type="text" [(ngModel)]="val" name='name'/>
+   {{val}}
+
+   <h3>vidation</h3>
+   <div *ngFor="let student of students">
+    <input type="text"  name='name' [(ngModel)]="student.firstName"/>
+    <input type="text"  name='name' [(ngModel)]="student.lastName"/>
+    <button type='button' label="Save" (click)="submit(students)">Save</button>
+   </div>
+
+   <h3>Array with for loop</h3>
+   <div *ngFor = "let i of employ">{{i}}</div>
+   <br>
+   <h3>Array of Object with For loop</h3>
+   <div *ngFor = "let i of arrObj">{{i.name}}-{{i.age}}-{{i.depart}}</div>
+
+
+   
+
+   <h3>interpolation</h3>
+   <input type="text" name="abc" disabled="disable" [value]="name">
+   <br>
+   <h3> Property binding</h3>
+   <input type="text" name="abc" disabled="disable" [value]="name"> -->
+
+<!-- 
+   <h3>Two way Binding</h3>
+   <input type="text" [(ngModel)='val' name="name">
+   <br>
+   <h3> {{val}} </h3> -->

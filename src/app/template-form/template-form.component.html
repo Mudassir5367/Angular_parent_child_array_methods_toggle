@@ -1,0 +1,140 @@
+<p>template-form works!</p>
+<!-- <form>
+    <input type="text" #uname placeholder="User Name"><br><br>
+<input type="text" #udept placeholder="User Department"><br><br>
+<input type="text" #userNmbr placeholder="User Number"><br><br>
+<button (click)="onClick(uname,udept,userNmbr)">User Add</button>
+<button type="reset">Reset</button>
+<br><br>
+</form>
+
+<div>
+    <table style="border:1px solid orange">
+        <tr>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Sr No.</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let user of users index as i"></tr>
+        <td>{{user.name}}</td>
+        <td>{{user.dept}}</td>
+        <td>{{user.srNo}}</td>
+    </table>
+
+</div> -->
+
+<!-- <br><br><br> -->
+
+
+
+<!-- 
+
+<form (ngSubmit)="formSubmitEvent()">
+    <input type="text" placeholder="Enter text" [(ngModel)]="formData.id" name="id">
+    <input type="text" placeholder="Enter text" [(ngModel)]="formData.name" name="name">
+    <input type="submit"/>
+
+</form>
+<br><br><br><br> -->
+ 
+<!-- UMAR BHAI VALIDATION -->
+
+ <!-- <form #form="ngForm" (ngSubmit)="submitEvent()" >
+
+<input type="text" name="name" [(ngModel)]="formData.fname">
+<span style="color: red" *ngIf="isNameValid">Please enter your name</span>
+<input type="text" name="name1"[(ngModel)]="formData.id">
+<button>Save</button>
+
+ </form>
+ <br> -->
+
+<form #templateForm="ngForm">
+
+ <div *ngFor="let form of forms">
+        <input type="text" placeholder="firstname"  name="fname" [(ngModel)]="form.fname"><br>
+     <span style="color: red;" *ngIf="isNameValid">plz enter firstname</span>
+     <br> 
+    
+     <input type="text"  placeholder="lastname" id="lname" name="lname"[(ngModel)]="form.lname" > <br>
+     <span  style="color: red;">plz enter lastname </span>
+     <br> 
+
+     <select required #select="ngModel" name="dropdown" [(ngModel)]="form.dropdown">
+        <option value="1">Pakistan</option>
+        <option selected value="2">Punjab</option>    
+        <option value="3">KPK</option>
+        <option value="4">Sindh</option>
+        <option value="5">Balochistan</option>
+     </select><br>
+     <span *ngIf= "select.invalid && select.touched" style="color: red;">Plz select below</span><br>
+
+     <label >Select the religion<br>
+     <span *ngIf="label.invalid && label.touched" style="color: red;">Choose one religion</span><br>
+     <input type="radio" required #label="ngModel"  id="one" [(ngModel)]="form.religion"  value="muslim"  name="religion">Muslim<br>
+     <input type="radio"  required #label="ngModel" id="two" [(ngModel)]="form.religion"  value="nonMuslim" name="religion">Non-Muslim
+     </label><br>
+     <br>
+   
+
+     <input type="date" required #date="ngModel" name="date" id="date" [(ngModel)]="form.date"><br>
+     <span *ngIf="date.pristine && date.invalid && date.touched" style="color: red;" >Choose the date</span><br>
+    
+
+     <label  for="">Select the Subject<br>
+     <input type="checkbox" name="box" [(ngModel)]="form.box">Math <br>
+     <input type="checkbox" name="box" [(ngModel)]="form.box">Physics <br>
+     <input type="checkbox" name="box" [(ngModel)]="form.box">Chemistry <br>
+     <input type="checkbox" name="box" [(ngModel)]="form.box">Engilsh </label><br><br>
+     <button (click)="user(form)">Submit</button>
+  </div>
+</form>
+<br><br>
+
+
+
+
+<!-- VALIDATION WITH INVALID AND TOUCHED -->
+
+<!-- <form #templateForm="ngForm">
+
+    <div *ngFor="let form of forms">
+           <input type="text" required #fname="ngModel" placeholder="firstname" id="fname" name="fname" [(ngModel)]="form.fname"><br>
+        <span *ngIf="fname.invalid && fname.touched" style="color: red;">plz enter firstname</span>
+        <br> 
+       
+        <input type="text" required #lname="ngModel" placeholder="lastname" id="lname" name="lname"[(ngModel)]="form.lname" > <br>
+        <span *ngIf= "lname.invalid && lname.touched" style="color: red;">plz enter lastname </span>
+        <br> 
+   
+        <select required #select="ngModel" name="dropdown" [(ngModel)]="form.dropdown">
+           <option value="1">Pakistan</option>
+           <option selected value="2">Punjab</option>    
+           <option value="3">KPK</option>
+           <option value="4">Sindh</option>
+           <option value="5">Balochistan</option>
+        </select><br>
+        <span *ngIf= "select.invalid && select.touched" style="color: red;">Plz select below</span><br>
+   
+        <label >Select the religion<br>
+        <span *ngIf="label.invalid && label.touched" style="color: red;">Choose one religion</span><br>
+        <input type="radio" required #label="ngModel"  id="one" [(ngModel)]="form.religion"  value="muslim"  name="religion">Muslim<br>
+        <input type="radio"  required #label="ngModel" id="two" [(ngModel)]="form.religion"  value="nonMuslim" name="religion">Non-Muslim
+        </label><br>
+        <br>
+      
+   
+        <input type="date" required #date="ngModel" name="date" id="date" [(ngModel)]="form.date"><br>
+        <span *ngIf="date.pristine && date.invalid && date.touched" style="color: red;" >Choose the date</span><br>
+       
+   
+        <label  for="">Select the Subject<br>
+        <input type="checkbox" name="box" [(ngModel)]="form.box">Math <br>
+        <input type="checkbox" name="box" [(ngModel)]="form.box">Physics <br>
+        <input type="checkbox" name="box" [(ngModel)]="form.box">Chemistry <br>
+        <input type="checkbox" name="box" [(ngModel)]="form.box">Engilsh </label><br><br>
+        <button (click)="user(form)">Submit</button>
+     </div>
+   </form>
+   <br><br> -->

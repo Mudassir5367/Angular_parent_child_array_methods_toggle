@@ -1,0 +1,52 @@
+<p>validation-form works!</p>
+
+
+
+
+    <form #templateForm="ngForm" (ngSubmit)="test()">
+
+        <div *ngFor="let form of forms">
+               <input type="text" placeholder="firstname"  name="fname" [(ngModel)]="formData.fname"><br>
+            <span style="color: red;" *ngIf="fNameValid">plz enter firstname</span>
+            <br> 
+            
+           
+            <input type="text"  placeholder="lastname" id="lname" name="lname"[(ngModel)]="formData.lname" > <br>
+            <span style="color: red" *ngIf="lNameValid">plz enter lastname </span>
+            <br> 
+        
+            <select name="dropdown" [(ngModel)]="formData.dropdown">
+               <option value="1">Pakistan</option>
+               <option selected value="2">Punjab</option>    
+               <option value="3">KPK</option>
+               <option value="4">Sindh</option>
+               <option value="5">Balochistan</option>
+            </select><br>
+            <span style="color: red;" *ngIf="selectValid">Plz select below</span><br>
+       
+            <label >Select the religion<br>
+            <span style="color: red;" *ngIf="religionValid">Choose one religion</span><br>
+            <input type="radio" id="one" [(ngModel)]="form.religion"  value="muslim"  name="religion">Muslim<br>
+            <input type="radio" id="two" [(ngModel)]="form.religion"  value="nonMuslim" name="religion">Non-Muslim
+            </label><br>
+            <br>
+          
+       
+            <input type="date" name="date" id="date" [(ngModel)]="form.date"><br>
+            <span style="color: red;" *ngIf="dateValid">Choose the date</span><br>
+           
+       
+            <label  for="">Select the Subject<br>
+                <span style="color: red;" *ngIf="boxValid">Plz choose the below boxes</span><br>
+            <input type="checkbox" name="box" [(ngModel)]="form.box">Math <br>
+            <input type="checkbox" name="box" [(ngModel)]="form.box">Physics <br>
+            <input type="checkbox" name="box" [(ngModel)]="form.box">Chemistry <br>
+            <input type="checkbox" name="box" [(ngModel)]="form.box">Engilsh </label><br><br> 
+            <!-- <button (click)="user(form)">Submit</button> -->
+            <button>Submit</button>
+            
+         </div>
+         
+       </form>
+
+   <br><br>
